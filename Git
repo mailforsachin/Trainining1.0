@@ -1,0 +1,107 @@
+Git is a version controlling software
+Its a framework . If you have heard about github,gitlab,bitbucket all uses git as a framework
+
+Requirements:
+
+ - Developers should have git client installed (https://git-scm.com/downloads)
+ - If you are looking for a GUI based git client then https://www.sourcetreeapp.com/ 
+ - An IDE (IntelliJ or eclipse etc)
+ - A directory on your laptop whre all your devops related experiments will be done
+ - Signup for a free account on github.com
+
+Git workflow:
+
+ - For every project there will be a central repository created (On Github) .For each repository there willl be a url to clone 
+ - Create a public repository in github ,Initialize with a readme file .Just select the other default options
+ - Once the repository is created it will be cloned by each developers to their local laptops 
+   Go to a command promt ,CD to the directory you created for DevOps experiments and run the below command 
+   
+                git clone CLONE_URL
+                
+    Run the below command to confirm that upstream server url details are present in the cloned repo
+       
+                git remote -v
+                
+ -  This will create a directory with the name of the repository you created earlier in github .The cloned directory will have contents from 
+     github central repo
+ -  Now create some new files (You can name anything ) with TXT extension under the cloned folder
+ -  Go to command prompt , CD to the cloned folder and run 
+     
+    git status 
+    
+ -  This will show that there are some untracked files in your directory .Whenever you create or modify a file in git repository you need to
+    move the file to a staging directory by running the below command
+    
+    git add FILENAME_WITH_EXTENSION
+    
+  - Once done run below command
+  
+    git status
+    
+  - You will see that everything is green . Now you have added all your files to git staging area .Time to commit to the database by running
+    
+    git commit -am "SOME COMMIT MESSAGE"
+   
+  - To see the log run the below command
+  
+     git log --oneline or git log
+     
+   - To see the state at the previous state run
+   
+     git checkout COMMIT_ID (Never commit while you are in the checckout state)
+    
+  - Till Now all changes you did are in the local repository to push to the remote one run the below command
+   
+    git push -u origin master
+    
+    It will ask for the github username and password .Enter the same and once authenticated you will see that the repo is updated with your changes
+    
+  - Make some changes directly at the git hub repo with out using the local repo. Now trying to make some changes at the local repo and
+    follow git add ,git commit ,git push .If it is rejected then run the below command
+    
+     git pull
+   
+  - git pull and git fetch are used to get the updates from remote repo to local .Find out the difference between both 
+   
+  - git tag  you can tag a version by running git tag command
+  
+  - Discuss about git hooks (Hooks trigger an action )
+  
+    Branching and merging
+    -----------------------------
+    Master will be the default branch . You can create other branches
+    
+  - create a new branch by running the below command
+    
+      git branch BRANCH_NAME
+   
+   - to get in to the new branch
+     
+      git checkout BRANCH_NAME
+    
+   - Make some changes and then do a git add ,git commit .
+   - To go back to the master branch run
+     
+      git checkout master
+      
+   - To merge the new branch you created to the master 
+      
+      From master branch run
+      
+     git merge NEW_BRANCH
+     
+    - To push a branch
+    
+    git push -u ORIGIN BRANCH_NAME
+    
+     - Learn How to create a pull request
+     - Learn integrating github with other tools
+     
+    Reference:
+    
+    https://www.atlassian.com/git/tutorials/advanced-overview
+    
+     
+    
+   
+    
