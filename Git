@@ -99,9 +99,24 @@ Git workflow:
      
     - Once you are comfortable with git commands ,try with intelliJ and see how GUI makes life easier for developers
      
+    Questions:
+    
+    1)Advantage of git over SVN or any other VCS tools
+    2)What is bare repository in git
+    3) What is the VCS software you are using in your company
+    4)What is the diffeerence between git pull vs fetch and which one is better
+    5)Explain git rebase
+    6)Git rebase vs merge ..what are the differences and explain the scenarios
+    7)What is git sub modules
+    
+    
+    
+    
+    
     Reference:
     
     https://www.atlassian.com/git/tutorials/advanced-overview
+    
     
      
     
