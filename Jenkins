@@ -1,0 +1,26 @@
+One EC2 instance t1.micro -> ubuntu 16.04 -->security group (All TCP ports opened from Anywhere) -> use exisiting key pair
+Open command prompt
+CD to the directory where you have the AWS key file (Eg: xxxx.pem)
+Right click on the EC2 instance you created ,click on connect and  copy the text which resembles below
+
+ssh - i KEYPAIR.pem PUBLIC DNS XXXXXXXXXXXXXXXXXXXXXXXX
+
+if it asks whether you need to add to known host,say yes
+
+Now you will be inside the EC2 instance you created . Install Jenkins there
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+Find the public dns at thee lower pane of the EC2 instance
+
+go to browser access url http://public_dns_instance:8080
+
+Make sure jenkins console is launched
+
+Jenkins when launched needs a random password to be input
+
+Read the message on the jenkins console ,it asks you to read a text file and input that as the password
+
