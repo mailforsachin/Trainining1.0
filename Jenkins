@@ -24,3 +24,14 @@ Jenkins when launched needs a random password to be input
 
 Read the message on the jenkins console ,it asks you to read a text file and input that as the password
 
+Once you enter the password, allow all reccomended plugins to install.
+Once completed create a new root user account and password
+Create a new free style project
+Give a name
+Add build step --> shell script --> type echoo "Hello world"
+Save/submit
+Click on Run build now
+
+If the result is blue --> success
+Red --> fail
+
