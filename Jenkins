@@ -94,7 +94,19 @@ Seed Job:
 Install 
 Job DSL plugin
 https://jenkinsci.github.io/job-dsl-plugin/
+In your git repo add a new file seed.groovy or any name you wish
+Copy the content of https://github.com/sumeshkanayi/com.mycom.bank/blob/master/seed.groovy to it
+Replace the github url with your repo url
+Add build step as Process Job DSL
+Give your repo clone url
+Select Look on filesystem
+In the DSL script section add seed.groovy
+Save and build now
+A new jenkins job will be created
 
+Assigmnent
+
+Create a new multibranch pipeline job using seed job
 
 
 
