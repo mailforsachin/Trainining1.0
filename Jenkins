@@ -28,7 +28,7 @@ Once you enter the password, allow all reccomended plugins to install.
 Once completed create a new root user account and password
 Create a new free style project
 Give a name
-Add build step --> shell script --> type echoo "Hello world"
+Add build step --> shell script --> type echo "Hello world"
 Save/submit
 Click on Run build now
 
@@ -59,7 +59,8 @@ Lanuch the agent
 
 -------------------------------------------------------------------
 
-Using Jenkinsfile
+Using Jenkinsfile (Pipeline Job)
+
 
 
 on your git repo add a file name as Jenkinsfile(No extension)
@@ -76,7 +77,7 @@ give the url as your repo url
 Save and build now 
 
 Create a new dev branch make the changes there in Jenkinsfile .See if it works or not.. it wont work why?
-
+Syntax : https://jenkins.io/doc/book/pipeline/
 
 
 Multibranch pipeline
