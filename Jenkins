@@ -35,3 +35,57 @@ Click on Run build now
 If the result is blue --> success
 Red --> fail
 
+
+Adding a new slave:
+
+On Slave:
+
+Create a new EC2 instance (t2.micro)
+Create a new user 
+Enable password authentication as yes in sshd configuration
+restart sshd service
+
+On Master:
+
+Go to manage jenkins
+Manage Nodes
+Give the labels
+Give the host name details
+Add remote temp directory as /tmp (Or anything)
+Select launch method as SSH based
+Add the credentials for the new user you created on the slave .
+Lanuch the agent
+
+
+-------------------------------------------------------------------
+
+Using Jenkinsfile
+
+
+on your git repo add a file name as Jenkinsfile(No extension)
+Copy the content from below and commit
+https://github.com/sumeshkanayi/com.mycom.bank/blob/master/Jenkinsfile
+Since the above example showcases running python script (install python on jenkins master or slave)
+
+sudo apt-get -y install python
+
+create a new pipeline job 
+In the pipeline section ,select pipeline from SCM,
+Select SCM as git
+give the url as your repo url
+Save and build now 
+
+Create a new dev branch make the changes there in Jenkinsfile .See if it works or not.. it wont work why?
+
+
+
+Multibranch pipeline
+--------------------------------
+Create a new multibranch pipeline job
+click add source
+give the git URL
+
+
+
+
+
