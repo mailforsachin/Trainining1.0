@@ -88,4 +88,13 @@ give the git URL
 
 
 
+Seed Job:
+
+
+Install 
+Job DSL plugin
+https://jenkinsci.github.io/job-dsl-plugin/
+
+
+
 
