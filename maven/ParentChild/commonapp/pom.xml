@@ -3,6 +3,7 @@
   <groupId>com.concretepage.app</groupId>
   <artifactId>commonapp</artifactId>
   <version> 1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
   
   <dependencies>
     <dependency>
