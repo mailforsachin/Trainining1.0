@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+ 
+    <groupId>com.sample</groupId>
+    <artifactId>ejb-parent</artifactId>
+    <version>7.1.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>JBoss AS Quickstarts: Parent for remote EJB and Java client</name>
+ 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+     
+    <properties>
+ 
+        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
+    </properties>
+ 
+ 
+    <modules>
+        <module>server</module>
+        <module>client</module>
+    </modules>
+ 
+   <build>
+      <plugins>
+ 
+            <plugin>
+               <groupId>org.jboss.as.plugins</groupId>
+               <artifactId>jboss-as-maven-plugin</artifactId>
+               <version>${version.org.jboss.as.plugins.maven.plugin}</version>
+               <inherited>true</inherited>
+               <configuration>
+                  <skip>true</skip>
+               </configuration>
+            </plugin>
+         </plugins>
+   </build>
+ 
+</project>
