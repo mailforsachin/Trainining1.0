@@ -1,0 +1,9 @@
+A jira project should exist
+A backlog with multiple stories has to be created
+Releases and Sprint to be planned
+A Github project could be created for the above project
+Use intelliJ as an IDE tool,create a new maven TOMCAT project
+All commits should be associated with a JIRA story
+Each push should trigger a jenkins job which should build,package .Should also deploy snapshot war file to nexus
+Another job for release: which should use maven release plugin , tag the release as version 1.0 in github and deploy to the jar file to nexus release
+repository
