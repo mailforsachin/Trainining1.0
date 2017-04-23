@@ -1,0 +1,33 @@
+Install docker
+
+curl -fsSL https://get.docker.com/ | sh
+
+run the below commands
+
+docker images
+
+docker ps
+
+docker ps -a
+
+docker pull ubuntu:16.04
+
+docker pull centos
+
+docker run -it -d --name CONTAINER_NAME -v /A_VOLUME_INSIDE_CONTAINER:/VOLUME_IN_HOST -p 9080:80 -p 9081:81 -p 9082:82 IMAGE_NAME
+
+docker ps
+
+docker attach CONTAINER_NAME
+
+Cntrl+P+Q
+
+docker exec -it CONTAINER_NAME /bin/bash
+
+
+
+
+
+
+
+
