@@ -7,3 +7,9 @@ All commits should be associated with a JIRA story
 Each push should trigger a jenkins job which should build,package .Should also deploy snapshot war file to nexus
 Another job for release: which should use maven release plugin , tag the release as version 1.0 in github and deploy to the war file to nexus release
 repository
+
+Instance requirement:
+JIRA --> Atlassian cloud 
+Git --> Github
+Jenkin --> t2.micro
+nexus --> t2.medium
