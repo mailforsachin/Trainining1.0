@@ -15,6 +15,13 @@ docker ps
 docker ps -a
 
 
+Lets run docker as a container 
+
+Go to the below url and search for jenkins
+
+https://hub.docker.com/
+
+
 docker run -p ANY_PORT:8080 -p ANY_PORT_1:50000 jenkins
 
 
@@ -49,7 +56,7 @@ RUN wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key
 RUN sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 RUN apt-get -y update &&  apt-get -y install jenkins
 
-docker build --tag myJenkins:1.0 .
+docker build --tag username_jenkins:1.0 .
 
 Run
 docker images
@@ -58,7 +65,17 @@ docker run -it -d --name Jenkins -v /A_VOLUME_INSIDE_CONTAINER:/VOLUME_IN_HOST -
 
 go to your browser access http://PUBLIC_DNS_OF_UR_DOCKER_HOST:9080
 
+Signup for account in https://hub.docker.com/
 
+create a repository
+
+docker login
+
+enter the credentials for docker hub
+
+docker tag username_myjenkins repository_you_created
+
+docker push repository_you_created
 
 
 
