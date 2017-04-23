@@ -1,5 +1,9 @@
 Install docker
 
+SSH to the Ubuntu host
+
+sudo -s
+
 curl -fsSL https://get.docker.com/ | sh
 
 run the below commands
@@ -23,6 +27,30 @@ docker attach CONTAINER_NAME
 Cntrl+P+Q
 
 docker exec -it CONTAINER_NAME /bin/bash
+
+Create a new Directory inside your docker host
+
+vi Dockerfile
+
+add the below instruction
+
+FROM ubuntu:16.04
+MAINTAINER your_email
+RUN apt-get -y update && apt-get -y intall default-jdk 
+RUN wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+RUN sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+RUN apt-get -y update &&  apt-get -y install jenkins
+
+docker build --tag myJenkins:1.0 .
+
+Run
+docker images
+
+docker run -it -d --name Jenkins -v /A_VOLUME_INSIDE_CONTAINER:/VOLUME_IN_HOST -p 9080:8080 Jenkins
+
+go to your browser access http://PUBLIC_DNS_OF_UR_DOCKER_HOST:9080
+
+
 
 
 
