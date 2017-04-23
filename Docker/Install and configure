@@ -77,6 +77,8 @@ docker tag username_myjenkins repository_you_created
 
 docker push repository_you_created
 
+Docker file reference : https://docs.docker.com/engine/reference/builder/#escape
+
 
 
 
