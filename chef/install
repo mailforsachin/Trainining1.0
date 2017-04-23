@@ -1,0 +1,9 @@
+sudo chef-server-ctl reconfigure
+sudo chef-server-ctl user-create root sumesh kk 'Sia123' sumeshkanayi@gmail.com --filename /chef.pem
+#sudo chef-server-ctl org-create short_name 'sia' --association_user root --filename /sia-validator.pem
+sudo chef-server-ctl install chef-manage
+sudo chef-server-ctl reconfigure
+sudo chef-manage-ctl reconfigure
+sudo chef-server-ctl install opscode-reporting
+sudo chef-server-ctl reconfigure
+sudo opscode-reporting-ctl reconfigure
