@@ -1,0 +1,9 @@
+docker run -it -d -p 10022:22 -p 3000:3000 -p 4567:4567 -p 5671:5671 -p 15672:15672 -v /sensu:/fromHost --name server hiroakis/docker-sensu-server
+
+docker run -it -d -p 9080:80 -v /sensu:/fromHost --name client -it ubuntu:14.04
+
+apt-get -y update && apt-get -y install wget 
+
+Follow the below instruction
+
+https://github.com/hiroakis/docker-sensu-server
