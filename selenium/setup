@@ -1,5 +1,8 @@
 Create a t2.medium instannce Windows 2008 r2
 Install latest JDK
-https://github.com/lalit-k/selenium-java-tests.git
+https://github.com/wouterla/selenium.git (sample code)
+Install firefox
 Install git
 Download Maven and extract it
+Add the windows machine as a slave
+create a new free style job ,invoke top level mavan targets and do a clean test
