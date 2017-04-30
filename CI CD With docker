@@ -1,3 +1,7 @@
+Task: Deploy tomcat maven project to docker
+Tool involved: git,jenkins,maven,docker,nexus(Optional),dockerhub
+
+
 Fork this repository https://github.com/sumeshkanayi/Webapp.git
 create a new Jenkins freestyle job ,it should do a maven clean install (Inovke top level maven target)
 Install cloudbees docker build and publish plugin in jenkins
@@ -6,12 +10,13 @@ add a build step to tag and push the docker image to docker hub
 Try building it will fail
 
 Install docker on jenkins . https://get.docker.com/
- ty building it again it will fail
- run the command sudo usermod -a -G docker jenkins (What does this command do?)
+try building it again it will fail 
+ run the command sudo usermod -a -G docker jenkins (What does this command do?).Reboot ur docker instance
  build again
- On target docker host
- find out which is the binary file for docker service
- edit and add the string to it -H tcp://0.0.0.0:2735 (What does it do?)
+ On target docker host , find out which is the executable binary for docker service
+ Edit the file and add the string to the line starting with "ExecStart=/usr/bin/dockerd " -H tcp://0.0.0.0:2735 (What does it do?)
  Now add another build step which will run a container on remote host
 
-
+(In case if you have configured the jenkins to use nexus as a maven repo for depedency management and as artifct repo then make ure that
+nexus is up and running in the network .If you are using nexus public IP in AWS under settings.xml of ur jenkins server (under jenkins
+user home directory) make sure the new IP is updated there)
