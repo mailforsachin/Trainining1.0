@@ -1,0 +1,17 @@
+Fork this repository https://github.com/sumeshkanayi/Webapp.git
+create a new Jenkins freestyle job ,it should do a maven clean install (Inovke top level maven target)
+Install cloudbees docker build and publish plugin in jenkins
+add a build step to tag and push the docker image to docker hub
+
+Try building it will fail
+
+Install docker on jenkins . https://get.docker.com/
+ ty building it again it will fail
+ run the command sudo usermod -a -G docker jenkins (What does this command do?)
+ build again
+ On target docker host
+ find out which is the binary file for docker service
+ edit and add the string to it -H tcp://0.0.0.0:2735 (What does it do?)
+ Now add another build step which will run a container on remote host
+
+
