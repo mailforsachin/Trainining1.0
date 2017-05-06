@@ -2,6 +2,7 @@ Setup a new rundeck server
 -------------
 create a t2.medium instance
 sudo apt-get -y update && apt-get -y install default-jdk
+wget http://dl.bintray.com/rundeck/rundeck-deb/rundeck-2.8.2-1-GA.deb
 sudo dpkg -i rundeck-2.8.2-1-GA.deb
 sudo vi /etc/rundec/rundeck.properties
 Add  http://your_public_dns:4440 to the grails URL section (replace localhost)
