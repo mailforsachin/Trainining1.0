@@ -1,0 +1,27 @@
+Setup a new rundeck server
+-------------
+create a t2.medium instance
+sudo apt-get -y update && apt-get -y install default-jdk
+sudo dpkg -i rundeck-2.8.2-1-GA.deb
+sudo vi /etc/rundec/rundeck.properties
+Add  http://your_public_dns:4440 to the grails URL section (replace localhost)
+Access http://public_dns:4440
+create a new project
+Add job
+add steps
+
+Adding multiple rundeck nodes
+-------------------------
+
+
+create a new t2.micro instance
+sudo adduser rundeck --disabled-password
+su rundeck
+ssh-keygen
+
+Rundeck server
+
+login to rundeck server
+
+vi /etc/passwd , replace /bash/false with /bin/bash
+do a ssh-keygen
